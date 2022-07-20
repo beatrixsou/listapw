@@ -1,13 +1,13 @@
 <?php
 
-$time = $_POST['time'];
-$hora = 0;
-$minuto = 0;
+    $valor = $_POST['valor'];
 
-$hora = date('h', strtotime($time));
-$minuto = date('i', strtotime($time));
+    $dados = explode(":", $valor);
 
-$time = ($hora * 60) + $minuto;
-echo "$hora é o valor de hora e $minuto é o valor de minutos, e se passaram $time minutos desde o início do dia. "
+    $dados1 = $dados[0]*60 + $dados[1];
+    echo "São " . $dados[0] . " :  " . $dados[1] . ". Onde $dados[0] é 
+as horas e $dados[1] é os minutos. E se passaram $dados1 horas desde o inicio do dia!";
+    
+   
 
 ?>
