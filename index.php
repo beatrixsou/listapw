@@ -1,4 +1,13 @@
-
+<?php
+        require 'config.php';
+        $lista = [];
+        $sql = $pdo->query("SELECT * FROM usuarios");
+        if($sql->rowCount() > 0) {
+            $lista = $sql->fetchALL(PDO::FETCH_ASSOC);
+        }
+    
+    ?>
+    
     <a href= "adicionar.php">Adicionar Usuário</a>
 
     <table border="1" width="100%">
